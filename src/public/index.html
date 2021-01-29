@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="swipe game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swipe Game - 101</title>
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#2F3BA2">
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Plugin Styles -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <!-- Main styles -->
+    <link rel="stylesheet" href="/static/css/main.css">
+  </head>
+
+  <body class="body-game">
+    <main class="wrapper">
+      <section class="content active" data-stage="start">
+        <div class="b-start">
+          <div class="brand">
+            <h1><span class="color__orange">Swipe</span><span class="color__primary">Games!</span></h1>
+
+            <div class="icons">
+              <ul>
+                <li><i class="fas fa-arrow-circle-right color__fail"></i></li>
+                <li><i class="fas fa-arrow-circle-up color__correct"></i></li>
+                <li><i class="fas fa-arrow-circle-left color__fail"></i></li>
+                <li><i class="fas fa-arrow-circle-down color__correct"></i></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="action-next">
+            <button class="btn-start" type="button">Start</button>
+            <a href="javascript:;" class="cta-intro" data-target="#section-intro">Intro <i
+                class="fas fa-question-circle"></i></a>
+          </div>
+        </div>
+
+        <div class="b-intro" id="section-intro">
+          <button class="btn-close" data-target="#section-intro" type="button"><i class="fas fa-times"></i></button>
+
+          <div class="content-intro">
+            <div>
+              <p class="arrow-icon"><i class="fas fa-arrow-circle-left color__correct"></i></p>
+              <p class="hit-swipe"><i class="far fa-hand-pointer"></i></p>
+            </div>
+            <div>
+              <p class="arrow-icon"><i class="fas fa-arrow-circle-right color__fail"></i></p>
+              <p class="hit-swipe"><i class="far fa-hand-pointer"></i></p>
+            </div>
+          </div>
+
+          <div class="desc-intro">
+            <p>Blue: Follow the arrow</p>
+            <p>Red: Unfollow the arrow</p>
+          </div>
+        </div>
+      </section>
+      <section class="content" data-stage="games">
+        <div class="b-games" id="game-container">
+          <div class="progress-bar">
+            <div class="bar" id="progress-bar"></div>
+          </div>
+
+          <p class="score animated" id="score">0</p>
+
+          <!-- <i class="fas fa-arrow-circle-right arrow"></i> -->
+        </div>
+      </section>
+      <section class="content" data-stage="result">
+        <div class="b-result">
+          <div class="space-chart">
+            <div class="single-skill">
+              <div class="circlechart" data-percentage="92">
+                <svg class="circle-chart" viewBox="0 0 33.83098862 33.83098862" xmlns="http://www.w3.org/2000/svg">
+                  <circle class="circle-chart__background" cx="16.9" cy="16.9" r="15.9"></circle>
+                  <circle class="circle-chart__circle success-stroke" stroke-dasharray="0,100" cx="16.9" cy="16.9"
+                    r="15.9"></circle>
+                  <g class="circle-chart__info">
+                    <text class="circle-chart__percent" x="17.9" y="15.5">0%</text>
+                    <text class="circle-chart__subline" x="16.91549431" y="22">
+                      Accuracy
+                    </text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="b-result__total">
+            <div class="b-result__info">Score</div>
+            <div class="b-result__info color__orange" id="total-score">0</div>
+          </div>
+
+          <div class="b-result__row-card">
+            <div class="b-result__card b-result__card--success">
+              <p class="b-result__count" id="total-correct">0</p>
+              <p class="b-result__desc">Correct</p>
+            </div>
+            <div class="b-result__card b-result__card--fail">
+              <p class="b-result__count" id="total-fail">0</p>
+              <p class="b-result__desc">Failed</p>
+            </div>
+          </div>
+
+          <div class="b-result__cta">
+            <button class="b-result__refresh btn-refresh" type="button">Play Again!</button>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- modern browsers -->
+    <script type="module" src="/static/js/app.js" defer></script>
+
+    <!-- old stuff -->
+    <script nomodule src="/static/nomodule/app.js" defer></script>
+  </body>
+
+</html>

@@ -1,0 +1,97 @@
+.b-intro {
+  position: absolute;
+  width: 100%;
+  background-color: var(--base-color-white100);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  bottom: -100vh;
+  justify-content: center;
+  opacity: 0;
+
+  .btn-close {
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: var(--base-color-black80);
+    font-size: 2rem;
+    padding: .5rem;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    line-height: 0;
+
+    i {
+      font-size: inherit;
+      pointer-events: none;
+    }
+  }
+
+  .content-intro {
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-columns: auto auto;
+
+    div {
+
+
+      .arrow-icon {
+        text-align: center;
+        font-size: 5rem;
+        margin: 0 0 1rem 0;
+        line-height: 1;
+
+        i {
+          font-size: inherit;
+        }
+      }
+
+      .hit-swipe {
+        margin: 0;
+        font-size: 2rem;
+        line-height: 1;
+        padding: 0 1.5rem;
+
+        i {
+          animation: fadeInRight 1.5s infinite;
+          color: var(--base-color-black50);
+          font-size: inherit;
+        }
+      }
+    }
+  }
+
+  .desc-intro {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--base-color-black30);
+    border-radius: 8px;
+
+    p {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--base-color-black80);
+      margin: 0;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    bottom: 0;
+    animation-name: slideUp;
+    animation-duration: .5s;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    bottom: -100vh;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}

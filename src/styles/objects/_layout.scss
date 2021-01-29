@@ -1,0 +1,26 @@
+.body-game {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--base-color-black20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    max-width: 640px;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--base-color-white100);
+    padding: 0 1rem;
+  }
+
+  .content {
+    display: none;
+    position: relative;
+    overflow: hidden;
+
+    &.active {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+// Make type normal across browsers
+*,
+html,
+body {
+  font-size: $font-base-size;
+  font-family: $font-fm-base;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+// Headers
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: $header-margin * 1.5;
+  line-height: $header-line-height;
+  font-weight: 700;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

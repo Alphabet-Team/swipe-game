@@ -1,0 +1,31 @@
+.color {
+  color: inherit;
+
+  &__primary {
+    color: var(--base-color-blue100);
+  }
+
+  &__secondary {
+    color: var(--base-color-blue50);
+  }
+
+  &__blue {
+    color: var(--base-color-blue70);
+  }
+
+  &__red {
+    color: var(--base-color-red100);
+  }
+
+  &__orange {
+    color: var(--base-color-orange50);
+  }
+
+  &__fail {
+    color: var(--base-color-red50);
+  }
+
+  &__correct {
+    color: var(--base-color-blue70);
+  }
+}
