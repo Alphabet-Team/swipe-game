@@ -28,7 +28,7 @@ const stage = () => {
     // Progress Bar Countdown Timer
 
     const progressBarElement = document.querySelector("#progress-bar");
-    const gameDuration = 30; // Game Duration in seconds
+    const gameDuration = 20; // Game Duration in seconds
     const progressBarWidthDenominator = gameDuration * 1000;
     let progressBarWidthNumerator = gameDuration * 1000;
     let progressBarInterval = setInterval(progressBarFrame, 10);
